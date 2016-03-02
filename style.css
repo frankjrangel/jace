@@ -292,6 +292,9 @@ header {
     height: 150px;
     margin-top: -200px; }
 
+#productos-y-servicios {
+  width: 100%; }
+
 #contacto {
   position: relative;
   width: 100%; }
