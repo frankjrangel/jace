@@ -1,0 +1,399 @@
+/*
+Theme Name: Jace web
+Theme URI: https://www.movatic.com
+Author: Movatic Team
+Author URI: https://www.movatic.com
+Description: Tema de wordpress personalizado para Jace Consultores.
+Version: 1.0
+*/
+@font-face {
+  font-family: 'cocogoose';
+  src: url("fonts/CocoGoose/cgoo-webfont.eot");
+  src: url("fonts/CocoGoose/cgoo-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/CocoGoose/cgoo-webfont.woff2") format("woff2"), url("fonts/CocoGoose/cgoo-webfont.woff") format("woff"), url("fonts/CocoGoose/cgoo-webfont.ttf") format("truetype"), url("fonts/CocoGoose/cgoo-webfont.svg#cocogooseregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'cocogooselight';
+  src: url("fonts/CocoGooseLight/cocogoose_light-webfont.eot");
+  src: url("fonts/CocoGooseLight/cocogoose_light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/CocoGooseLight/cocogoose_light-webfont.woff2") format("woff2"), url("fonts/CocoGooseLight/cocogoose_light-webfont.woff") format("woff"), url("fonts/CocoGooseLight/cocogoose_light-webfont.ttf") format("truetype"), url("fonts/CocoGooseLight/cocogoose_light-webfont.svg#cocogooselight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'din';
+  src: url("fonts/Din/din-regular-webfont.eot");
+  src: url("fonts/Din/din-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Din/din-regular-webfont.woff2") format("woff2"), url("fonts/Din/din-regular-webfont.woff") format("woff"), url("fonts/Din/din-regular-webfont.ttf") format("truetype"), url("fonts/Din/din-regular-webfont.svg#dinregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'corbel';
+  src: url("fonts/corbel-italic.ttf") format("truetype"); }
+body {
+  background: #e5f3f1;
+  height: 3000px;
+  min-width: 320px;
+  max-width: 1920px;
+  font-family: din;
+  font-size: 16px; }
+
+header {
+  min-width: 320px; }
+  header #container-nav {
+    padding: 0; }
+  header .navbar-default {
+    background: #2a2b2a;
+    border: none;
+    font-family: corbel;
+    font-size: 17px;
+    border-radius: 0; }
+  header .navbar {
+    top: 20px; }
+    header .navbar .navbar-header {
+      height: 85px; }
+    header .navbar .navbar-brand {
+      height: 70px;
+      width: 160px;
+      padding: 20px;
+      margin-bottom: 10px;
+      display: block;
+      margin: 0 20px !important;
+      background: url("imagenes/logo_jace.png") center no-repeat; }
+    header .navbar .navbar-nav li > a {
+      line-height: 55px;
+      padding-left: 11px;
+      padding-right: 11px;
+      transition: ease all 0.5s; }
+      header .navbar .navbar-nav li > a:hover {
+        color: #c66f37; }
+    header .navbar .navbar-collapse {
+      text-align: center;
+      padding: 0;
+      max-height: 380px !important;
+      border: none; }
+    header .navbar .navbar-toggle {
+      margin-right: 30px !important; }
+
+@media (max-width: 768px) {
+  header .navbar {
+    background: url("imagenes/logo_jace_movil.png") center 2px no-repeat;
+    background-color: #2a2b2a; }
+    header .navbar .navbar-header {
+      height: 50px; }
+    header .navbar .navbar-brand {
+      display: none; }
+    header .navbar .navbar-nav li > a {
+      line-height: 30px;
+      border-top: 1px solid #979797;
+      text-align: left;
+      padding-left: 70px !important; } }
+#inicio {
+  width: 100%; }
+  #inicio .blur {
+    padding: 120px 20%;
+    padding-bottom: 450px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); }
+  #inicio #panel-negro-tope-izquierdo {
+    position: absolute;
+    z-index: 10;
+    background: #231f20;
+    width: 30%;
+    height: 740px;
+    transform: rotate(18deg);
+    left: -15%;
+    top: -250px; }
+  #inicio .titulo-seccion {
+    text-align: center;
+    font-family: cocogooselight;
+    font-weight: 200;
+    font-size: 35.5px; }
+    #inicio .titulo-seccion span {
+      font-size: 30px; }
+  #inicio .subtitulo-seccion {
+    text-align: center;
+    font-family: corbel;
+    font-size: 19px;
+    padding: 30px 0px; }
+  #inicio .texto {
+    font-family: din;
+    font-size: 16px; }
+
+#inicio2 {
+  position: relative;
+  z-index: 1000;
+  background: url("imagenes/fondo_principios.png") top no-repeat;
+  background-size: 100%;
+  margin-top: -260px;
+  padding-top: 300px;
+  width: 100%; }
+  #inicio2 .conocenos-container {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10%;
+    padding-bottom: 20px; }
+    #inicio2 .conocenos-container .conocenos {
+      position: absolute;
+      z-index: 100;
+      top: -1400px;
+      left: -210px;
+      width: 600px;
+      height: 1300px;
+      background: url("imagenes/fondo_conocenos.png") no-repeat;
+      background-size: 100%;
+      text-align: center;
+      color: #e5f3f1;
+      font-family: cocogoose;
+      font-size: 40px; }
+      #inicio2 .conocenos-container .conocenos h1 {
+        position: absolute;
+        bottom: 124px;
+        right: 55px; }
+    #inicio2 .conocenos-container .circulo-conocenos {
+      position: absolute;
+      top: -120px;
+      left: 0px;
+      background: url("imagenes/circulo_naranja_conocenos.png") center no-repeat;
+      width: 430px;
+      height: 360px; }
+    #inicio2 .conocenos-container #contenedor-parrafos {
+      -moz-column-count: 2;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 20px;
+      column-count: 2;
+      column-gap: 20px; }
+      #inicio2 .conocenos-container #contenedor-parrafos .parrafo {
+        font-family: din;
+        font-size: 16px;
+        color: #979797; }
+        #inicio2 .conocenos-container #contenedor-parrafos .parrafo span {
+          color: black; }
+
+#por-que {
+  position: relative;
+  padding: 0 10%;
+  z-index: 0; }
+  #por-que > div.medio {
+    width: 50%; }
+  #por-que .texto-container p {
+    padding: 4px;
+    color: #e5f3f1;
+    background: #313a44; }
+  #por-que .linea-naranja {
+    height: 100px; }
+  #por-que .categorias {
+    position: relative; }
+    #por-que .categorias .contenedor-categorias {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 0; }
+      #por-que .categorias .contenedor-categorias .categoria {
+        width: 18%;
+        padding: 0 1%;
+        float: left; }
+        #por-que .categorias .contenedor-categorias .categoria .imagen {
+          position: relative;
+          width: 100%;
+          background: #313a44;
+          border-radius: 50%;
+          padding: 50%; }
+          #por-que .categorias .contenedor-categorias .categoria .imagen img {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 25%;
+            left: 25%; }
+        #por-que .categorias .contenedor-categorias .categoria .texto {
+          text-align: center;
+          font-size: 16px;
+          font-family: din;
+          color: #4b4b4b; }
+          #por-que .categorias .contenedor-categorias .categoria .texto h2 {
+            color: #e5f3f1;
+            border-radius: 35px;
+            height: 40px;
+            padding: 0 5%;
+            line-height: 40px;
+            font-family: cocogoose;
+            font-size: 16px;
+            background: #a39a72; }
+        #por-que .categorias .contenedor-categorias .categoria:nth-child(3n + 1) h2 {
+          background: #8aa173; }
+        #por-que .categorias .contenedor-categorias .categoria:nth-child(3n + 2) h2 {
+          background: #71a5a7; }
+
+#grupo-jace {
+  position: relative;
+  width: 100%; }
+  #grupo-jace .blur {
+    position: relative;
+    width: 100%;
+    padding: 50px 5%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); }
+    #grupo-jace .blur h1 {
+      width: 50%; }
+  #grupo-jace .panel-negro-tope-derecho {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: url("imagenes/tope_grupo.svg") no-repeat top right; }
+  #grupo-jace .circulo-naranja {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100; }
+    #grupo-jace .circulo-naranja img {
+      display: block;
+      width: 57%;
+      margin-left: 15%;
+      margin-top: 10%; }
+  #grupo-jace .contenedor-grupo {
+    position: relative;
+    z-index: 100;
+    padding: 50px 15%; }
+    #grupo-jace .contenedor-grupo #contenedor-equipo .integrante {
+      width: 30%;
+      margin: 1%;
+      float: left; }
+      #grupo-jace .contenedor-grupo #contenedor-equipo .integrante img {
+        width: 100%;
+        padding: 50%; }
+    #grupo-jace .contenedor-grupo h2, #grupo-jace .contenedor-grupo h3 {
+      font-family: din;
+      font-size: 18px;
+      padding: 4px 12px;
+      margin: 0;
+      background: #8f8686;
+      display: inline-block;
+      line-height: 22px; }
+  #grupo-jace #fill-grupo {
+    clear: both;
+    width: 140%;
+    margin-left: -20%;
+    background: url("imagenes/fondo_footer_grupo.svg") no-repeat top left;
+    background-size: 92% 100%;
+    height: 150px; }
+  #grupo-jace #relleno-grupo {
+    background: #d2e1d1;
+    width: 140%;
+    margin-left: -20%;
+    height: 100px; }
+  #grupo-jace #footer-grupo {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    padding: 0 20%;
+    padding-bottom: 30px;
+    height: 150px;
+    margin-top: -200px; }
+
+#contacto {
+  position: relative;
+  width: 100%; }
+  #contacto .blur {
+    position: relative;
+    width: 100%;
+    padding: 50px 5%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); }
+  #contacto .ninja-forms-all-fields-wrap {
+    position: relative;
+    z-index: 1000; }
+    #contacto .ninja-forms-all-fields-wrap label {
+      font-weight: 400; }
+  #contacto .ninja-forms-required-items {
+    display: none; }
+  #contacto .field-wrap {
+    float: left;
+    width: 16%;
+    margin: 2%; }
+  #contacto .textarea-wrap {
+    float: none;
+    width: 96%;
+    max-width: 1300px;
+    margin: auto; }
+  #contacto .boton-wrap {
+    width: 100%;
+    margin-top: 80px; }
+    #contacto .boton-wrap .boton {
+      font-size: 18px;
+      font-family: cocogoose;
+      height: 60px;
+      line-height: 60px;
+      padding: 0 50px;
+      border: none;
+      color: #e5f3f1;
+      background: #313a44;
+      margin: auto;
+      display: block; }
+  #contacto #footer-formulario {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 200px;
+    margin-top: -160px;
+    background: url("imagenes/fondo_footer_formulario.svg");
+    background-size: 100% 100%; }
+
+@media (max-width: 768px) {
+  .conocenos {
+    display: none; }
+
+  .circulo-conocenos {
+    display: none; }
+
+  .texto-conocenos {
+    display: none; } }
+@media (min-width: 769px) {
+  #inicio .blur {
+    padding-top: 250px; }
+  #inicio #panel-negro-tope-izquierdo {
+    height: 1000px; } }
+@media (min-width: 992px) {
+  #inicio .blur {
+    padding-top: 150px; }
+  #inicio .texto {
+    padding-left: 40%; }
+
+  #inicio2 {
+    margin-top: -540px; } }
+@media (min-width: 1170px) {
+  #inicio #panel-negro-tope-izquierdo {
+    left: -20%;
+    height: 1000px; }
+  #inicio .titulo-seccion {
+    font-family: cocogoose; }
+
+  #inicio2 {
+    margin-top: -600px; }
+    #inicio2 .conocenos-container .conocenos {
+      left: -120px;
+      top: -1350px; }
+    #inicio2 .texto-conocenos h1 {
+      font-family: cocogoose;
+      padding-bottom: 20px; }
+
+  #por-que .texto-container h1 {
+    font-family: cocogoose;
+    padding-bottom: 20px; } }
+@media (min-width: 1560px) {
+  #inicio #panel-negro-tope-izquierdo {
+    left: -22%; }
+  #inicio .texto {
+    padding-left: 30%; }
+
+  #inicio2 {
+    margin-top: -600px; }
+    #inicio2 .conocenos-container .conocenos {
+      left: 0px;
+      top: -1320px; } }
+@media (min-width: 1920px) {
+  #inicio #panel-negro-tope-izquierdo {
+    left: -30%; } }
+
+/*# sourceMappingURL=style.css.map */
