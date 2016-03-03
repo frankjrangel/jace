@@ -440,27 +440,204 @@
             <p>
                 Amplia experiencia en empresas de consumo Masivo tales como Unilever, Clorox, Quaker, Mavesa,
                 J&J, S.C. Johnson, Loreal; en funciones diversas como Trade Marketing, Customer Service, Category
-                Managment, Key Account MT, Distribucion TT, y Project Lead.
+                Managment, Key Account MT, Distribución TT, y Project Lead.
             </p>
         <?php endif; ?>
     </div>
 </div><!-- final #grupo-jace -->
 
 <div class="seccion" id="productos-y-servicios">
+    <style>
+        <?php
+            $fondo_productos = false;
+            if ( $fondo_productos ) :
+        ?>
+            #productos-y-servicios
+            {
+                background: url();
+                background-size: cover;
+                background-position: center;
+            }
+        <?php else : ?>
+            #productos-y-servicios
+            {
+                background: url('<?php echo get_template_directory_uri(); ?>/imagenes/fondo_productos.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+        <?php endif; ?>
+    </style>
     <div class="blur">
+        <?php
+            $titulo_productos = false;
+            if ( $titulo_productos ) :
+                // Sacar de base de datos
+            else :
+        ?>
+            <h1>Desarrollo de metodologías profesionales</h1>
+            <h2>Conoce nuestros productos</h2>
+        <?php endif; ?>
+        <div class="contenedor-productos-y-servicios">
+            <?php
+                $template_uri = get_template_directory_uri();
+                $productos_y_servicios = false;
+                if ( $productos_y_servicios ) :
+                    // Loop de productos_y_servicios
+                else :
+            ?>
+                <div class="producto">
+                    <div class="contenedor-imagen">
+                        <div class="contenedor-imagen2">
+                            <img src="<?php echo $template_uri; ?>/imagenes/metodologia.svg" alt="metodologia de procesos" />
+                        </div>
+                    </div>
+                    <p>
+                        Metodología de procesos de negocio con
+                        foco en CAPITALIZAR LAS BRECHAS en los
+                        procesos comerciales
+                    </p>
+                </div>
+                <div class="producto">
+                    <div class="contenedor-imagen">
+                        <div class="contenedor-imagen2">
+                            <img src="<?php echo $template_uri; ?>/imagenes/ejecucion.svg" alt="ejecucion de tienda" />
+                        </div>
+                    </div>
+                    <p>
+                        Ejecución de tienda perfecta MAPS
+                    </p>
+                </div>
+                <div class="producto">
+                    <div class="contenedor-imagen">
+                        <div class="contenedor-imagen2">
+                            <img src="<?php echo $template_uri; ?>/imagenes/auditorias.svg" alt="auditorias de procesos" />
+                        </div>
+                    </div>
+                    <p>
+                        Auditorias de Procesos (Distribuidores, Trade Marketing, Ventas , Gestión Comercial)
+                    </p>
+                </div>
+                <div class="producto">
+                    <div class="contenedor-imagen">
+                        <div class="contenedor-imagen2">
+                            <img src="<?php echo $template_uri; ?>/imagenes/programas_capacitacion.svg" alt="programas de capacitacion" />
+                        </div>
+                    </div>
+                    <p>
+                        Programas de capacitación
+                    </p>
+                </div>
+                <div class="producto">
+                    <div class="contenedor-imagen">
+                        <div class="contenedor-imagen2">
+                            <img src="<?php echo $template_uri; ?>/imagenes/road_to_market.svg" alt="road to market" />
+                        </div>
+                    </div>
+                    <p>
+                        Diseño del Road to Market
+                    </p>
+                </div>
+                <div class="producto">
+                    <div class="contenedor-imagen">
+                        <div class="contenedor-imagen2">
+                            <img src="<?php echo $template_uri; ?>/imagenes/coaching.svg" alt="coaching comercial" />
+                        </div>
+                    </div>
+                    <p>
+                        Coaching Comercial
+                    </p>
+                </div>
+            <?php endif; ?>
+            <div class="contenido-producto">
 
-    </div>
-</div>
+            </div>
+        </div><!-- final .contenedor-productos-y-servicios -->
+    </div><!-- final .blur -->
+</div><!-- final #productos_y_servicios -->
 
 <div class="seccion" id="clientes-y-aliados">
+    <style>
+        <?php
+            $fondo_clientes= false;
+            if ( $fondo_clientes ) :
+        ?>
+            #clientes-y-aliados
+            {
+                background: url();
+                background-size: cover;
+                background-position: center;
+            }
+        <?php else : ?>
+            #clientes-y-aliados
+            {
+                background: url('<?php echo get_template_directory_uri(); ?>/imagenes/fondo_clientes.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+        <?php endif; ?>
+    </style>
     <div class="blur">
+        <?php
+            $texto_clientes = false;
 
+            if ( $texto_clientes ) :
+                // Sacar info base de datos
+            else :
+        ?>
+            <h2>Conoce los aliados que nos han potenciado a ser quienes somos y a los clientes que hemos ayudado a cumplir sus metas</h2>
+        <?php endif; ?>
+        <div class="video">
+            <!-- embedded video -->
+        </div>
+        <div class="clientes-y-aliados">
+            <!-- TODO implementar loop segun categorias -->
+            <?php
+                $hay_categorias = false;
+                if ( $hay_categorias ) :
+                    // Sacar loop de categorías
+                else :
+            ?>
+                <div>
+                    <h2>REGIONALES - NACIONALES</h2>
+                    <div class="marcas">
+                        <img src="<?php echo $template_uri; ?>/imagenes/molinos_modernos.png" alt="molinos modernos" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/demasa.png" alt="demasa" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/monaca.png" alt="monaca" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/mavesa.png" alt="mavesa" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/alfonso_rivas.png" alt="alfonso rivas" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/frutika.png" alt="frutika" />
+                    </div>
+                </div>
+                <div>
+                    <h2>TRANSNACIONALES</h2>
+                    <div class="marcas">
+                        <img src="<?php echo $template_uri; ?>/imagenes/johnson.png" alt="johnson" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/diageo.png" alt="diageo" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/colgate_palmolive.png" alt="colgate palmolive" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/bp.png" alt="bp" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/johnson_and_johnson.png" alt="johnson" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/heinz.png" alt="heinz" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/concha_y_toro.png" alt="concha y toro" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/kellogs.png" alt="kellogs" />
+                    </div>
+                </div>
+                <div>
+                    <h2>DISTRIBUIDORAS</h2>
+                    <div class="marcas">
+                        <img src="<?php echo $template_uri; ?>/imagenes/alcipal.png" alt="alcipal" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/euro_group.png" alt="euro group" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/cocensa.png" alt="cocensa" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/diroca.png" alt="diroca" />
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
     </div>
 </div>
 
-<div class="seccion" id="captacion-de-talento">
+<!-- <div class="seccion" id="captacion-de-talento">
 
-</div>
+</div> -->
 
 <div class="seccion" id="contacto">
     <style>

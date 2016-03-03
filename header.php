@@ -35,7 +35,7 @@
                     <li><a href="#grupo-jace">Grupo Jace</a></li>
                     <li><a href="#productos-y-servicios">Productos y servicios</a></li>
                     <li><a href="#clientes-y-aliados">Clientes & aliados</a></li>
-                    <li><a href="#captacion-de-talento">Captación de talento</a></li>
+                    <!-- <li><a href="#captacion-de-talento">Captación de talento</a></li> -->
                     <li><a href="#contacto">Contacto</a></li>
                     <li><a href="#">Blog</a></li>
                   </ul>

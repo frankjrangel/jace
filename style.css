@@ -59,8 +59,6 @@ header {
       background: url("imagenes/logo_jace.png") center no-repeat; }
     header .navbar .navbar-nav li > a {
       line-height: 55px;
-      padding-left: 11px;
-      padding-right: 11px;
       transition: ease all 0.5s; }
       header .navbar .navbar-nav li > a:hover {
         color: #c66f37; }
@@ -187,7 +185,9 @@ header {
     #por-que .categorias .contenedor-categorias {
       display: flex;
       justify-content: space-between;
-      padding: 25px 0; }
+      padding: 25px 0;
+      max-width: 1200px;
+      margin: auto; }
       #por-que .categorias .contenedor-categorias .categoria {
         width: 18%;
         padding: 0 1%;
@@ -245,7 +245,7 @@ header {
   #grupo-jace .circulo-naranja {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
     z-index: 100; }
     #grupo-jace .circulo-naranja img {
       display: block;
@@ -258,7 +258,7 @@ header {
     padding: 50px 15%; }
     #grupo-jace .contenedor-grupo #contenedor-equipo .integrante {
       width: 30%;
-      margin: 1%;
+      margin: 1.66%;
       float: left; }
       #grupo-jace .contenedor-grupo #contenedor-equipo .integrante img {
         width: 100%;
@@ -289,14 +289,62 @@ header {
     width: 100%;
     padding: 0 20%;
     padding-bottom: 30px;
-    height: 150px;
+    height: 125px;
     margin-top: -200px; }
 
 #productos-y-servicios {
+  position: relative;
+  z-index: 1000;
   width: 100%; }
+  #productos-y-servicios .blur {
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    padding: 50px 20%; }
+    #productos-y-servicios .blur h1 {
+      text-align: center;
+      font-family: cocogoose;
+      font-size: 35.5px; }
+    #productos-y-servicios .blur h2 {
+      text-align: center;
+      font-family: cocogooselight;
+      font-size: 16px; }
+    #productos-y-servicios .blur p {
+      font-family: din;
+      font-size: 18px;
+      padding: 4px 12px;
+      margin: 0;
+      background: #262323;
+      color: #c0bbbb;
+      display: inline-block;
+      line-height: 22px; }
+  #productos-y-servicios .contenedor-productos-y-servicios {
+    padding-top: 30px; }
+    #productos-y-servicios .contenedor-productos-y-servicios .producto {
+      text-align: center;
+      float: left;
+      width: 30%;
+      margin: 20px 1.66%;
+      height: 300px; }
+      #productos-y-servicios .contenedor-productos-y-servicios .producto .contenedor-imagen {
+        position: relative;
+        width: 70%;
+        padding: 35%;
+        border-radius: 50%;
+        background: #313a44;
+        margin: 20px auto; }
+        #productos-y-servicios .contenedor-productos-y-servicios .producto .contenedor-imagen img {
+          position: absolute; }
+    #productos-y-servicios .contenedor-productos-y-servicios .contenido-producto {
+      clear: both;
+      width: 100%;
+      height: 0px; }
 
 #clientes-y-aliados {
   width: 100%; }
+  #clientes-y-aliados .blur {
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    padding: 50px 20%; }
 
 #contacto {
   position: relative;
@@ -307,6 +355,14 @@ header {
     padding: 50px 5%;
     height: 100%;
     background: rgba(255, 255, 255, 0.7); }
+    #contacto .blur h1 {
+      text-align: center;
+      font-family: cocogoose;
+      font-size: 35.5px; }
+    #contacto .blur p {
+      text-align: center;
+      font-family: cocogooselight;
+      font-size: 16px; }
   #contacto .ninja-forms-all-fields-wrap {
     position: relative;
     z-index: 1000; }
