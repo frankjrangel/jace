@@ -324,16 +324,20 @@ header {
       float: left;
       width: 30%;
       margin: 20px 1.66%;
-      height: 300px; }
+      height: 350px; }
       #productos-y-servicios .contenedor-productos-y-servicios .producto .contenedor-imagen {
         position: relative;
-        width: 70%;
-        padding: 35%;
+        width: 80%;
+        padding: 40%;
         border-radius: 50%;
         background: #313a44;
         margin: 20px auto; }
         #productos-y-servicios .contenedor-productos-y-servicios .producto .contenedor-imagen img {
-          position: absolute; }
+          position: absolute;
+          width: 40%;
+          height: 40%;
+          top: 30%;
+          left: 30%; }
     #productos-y-servicios .contenedor-productos-y-servicios .contenido-producto {
       clear: both;
       width: 100%;
@@ -344,7 +348,47 @@ header {
   #clientes-y-aliados .blur {
     background: rgba(255, 255, 255, 0.6);
     width: 100%;
-    padding: 50px 20%; }
+    padding: 50px 10%;
+    padding-bottom: 0; }
+    #clientes-y-aliados .blur h1 {
+      text-align: center;
+      font-family: cocogooselight;
+      font-size: 30px; }
+  #clientes-y-aliados .clientes-y-aliados > div {
+    float: left;
+    width: 30%;
+    margin: 20px 1.6%; }
+    #clientes-y-aliados .clientes-y-aliados > div h2 {
+      display: block;
+      position: relative;
+      z-index: 1000;
+      text-align: center;
+      line-height: 50px;
+      font-size: 17px;
+      background: #231f20;
+      color: #fafafa;
+      border-radius: 30px;
+      margin-bottom: 0; }
+    #clientes-y-aliados .clientes-y-aliados > div .marcas {
+      background: white;
+      margin-top: -25px;
+      position: relative;
+      z-index: 100;
+      padding: 25px;
+      padding-top: 50px; }
+      #clientes-y-aliados .clientes-y-aliados > div .marcas img {
+        display: block;
+        height: 50px;
+        width: 40%;
+        margin: 10px 5%;
+        float: left; }
+  #clientes-y-aliados #footer-clientes {
+    clear: both;
+    width: 140%;
+    margin-left: -20%;
+    height: 150px;
+    background: url("imagenes/fondo_footer_clientes.svg");
+    background-size: 100% 100%; }
 
 #contacto {
   position: relative;

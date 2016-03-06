@@ -584,11 +584,16 @@
                 // Sacar info base de datos
             else :
         ?>
-            <h2>Conoce los aliados que nos han potenciado a ser quienes somos y a los clientes que hemos ayudado a cumplir sus metas</h2>
+            <h1>Conoce los aliados que nos han potenciado a ser quienes somos y a los clientes que hemos ayudado a cumplir sus metas</h1>
         <?php endif; ?>
-        <div class="video">
-            <!-- embedded video -->
-        </div>
+        <?php
+            $video = false;
+            if ( $video ) :
+        ?>
+            <div class="video">
+                <!-- embedded video -->
+            </div>
+        <?php endif; ?>
         <div class="clientes-y-aliados">
             <!-- TODO implementar loop segun categorias -->
             <?php
@@ -606,6 +611,7 @@
                         <img src="<?php echo $template_uri; ?>/imagenes/mavesa.png" alt="mavesa" />
                         <img src="<?php echo $template_uri; ?>/imagenes/alfonso_rivas.png" alt="alfonso rivas" />
                         <img src="<?php echo $template_uri; ?>/imagenes/frutika.png" alt="frutika" />
+                        <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
                 <div>
@@ -619,6 +625,7 @@
                         <img src="<?php echo $template_uri; ?>/imagenes/heinz.png" alt="heinz" />
                         <img src="<?php echo $template_uri; ?>/imagenes/concha_y_toro.png" alt="concha y toro" />
                         <img src="<?php echo $template_uri; ?>/imagenes/kellogs.png" alt="kellogs" />
+                        <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
                 <div>
@@ -628,12 +635,17 @@
                         <img src="<?php echo $template_uri; ?>/imagenes/euro_group.png" alt="euro group" />
                         <img src="<?php echo $template_uri; ?>/imagenes/cocensa.png" alt="cocensa" />
                         <img src="<?php echo $template_uri; ?>/imagenes/diroca.png" alt="diroca" />
+                        <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
+                <div style="width:100%;clear:both;"></div>
             <?php endif; ?>
+        </div><!-- final .clientes-y-aliados -->
+        <div id="footer-clientes">
+
         </div>
-    </div>
-</div>
+    </div><!-- final .blur -->
+</div><!-- final #clientes-y-aliados -->
 
 <!-- <div class="seccion" id="captacion-de-talento">
 
