@@ -3,7 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="1153px" height="259px" viewBox="-348.204 -372.654 1153 259" enable-background="new -348.204 -372.654 1153 259"
-	 xml:space="preserve">
+	 xml:space="preserve" preserveAspectRatio="none">
 <polygon fill="#D2E1D2" points="1232.18,-45.46 2090.773,101.887 1230.478,101.887 "/>
 <path fill="none" stroke="#C66F37" stroke-width="1.4173" stroke-miterlimit="10" d="M740.206,461.487
 	c52.395-87.1,301.072-306.703,529.27-187.672c228.186,119.03,264.38,550.913,88.661,621.766
