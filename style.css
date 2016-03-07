@@ -181,9 +181,10 @@ header {
     float: left;
     padding-bottom: 50px; }
   #por-que .texto-container {
-    padding-right: 10%; }
+    padding-right: 5%; }
   #por-que .mapa-container {
-    padding: 0 5%; }
+    padding-top: 130px;
+    display: none; }
   #por-que .texto-container p {
     padding: 4px;
     color: #e5f3f1;
@@ -489,7 +490,12 @@ footer {
   #inicio .blur {
     padding-top: 250px; }
   #inicio #panel-negro-tope-izquierdo {
-    height: 1000px; } }
+    height: 1000px; }
+
+  #por-que .texto-container {
+    margin-left: -7%; }
+  #por-que .mapa-container {
+    display: block; } }
 @media (min-width: 992px) {
   #inicio .blur {
     padding-top: 150px; }
@@ -497,7 +503,11 @@ footer {
     padding-left: 40%; }
 
   #inicio2 {
-    margin-top: -540px; } }
+    margin-top: -540px; }
+
+  #por-que .mapa-container {
+    padding: 0 5%;
+    padding-top: 0px; } }
 @media (min-width: 1170px) {
   #inicio #panel-negro-tope-izquierdo {
     left: -20%;

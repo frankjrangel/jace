@@ -335,12 +335,13 @@ header
 
     .texto-container
     {
-        padding-right: 10%;
+        padding-right: 5%;
     }
 
     .mapa-container
     {
-        padding: 0 5%;
+        padding-top: 130px;
+        display: none;
     }
 
     .texto-container p
@@ -826,6 +827,19 @@ footer
             height: 1000px;
         }
     }
+
+    #por-que
+    {
+        .texto-container
+        {
+            margin-left: -7%;
+        }
+
+        .mapa-container
+        {
+            display: block;
+        }
+    }
 }
 
 @media (min-width: 992px)
@@ -843,10 +857,14 @@ footer
     #inicio2
     {
         margin-top: -540px;
-        .conocenos-container
-        {
+    }
 
-            //top:0px;
+    #por-que
+    {
+        .mapa-container
+        {
+            padding: 0 5%;
+            padding-top: 0px;
         }
     }
 }
