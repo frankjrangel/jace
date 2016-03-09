@@ -53,14 +53,14 @@
                     // Obtener texto
                 else :
             ?>
-                <p>
+                <p class="mobile-hide">
                     Somos una empresa dedicada a la asesoría, consultoría,
                     entrenamiento y auditoría integral en procesos
                     comerciales y de soporte a ventas, especializada en
                     áreas como Ventas, distribución, trade marketing y
                     recursos humanos.
                 </p>
-                <p>
+                <p class="mobile-hide">
                     Desde 1998 brindamos asesoría a empresas trasnacionales
                     y nacionales, fabricantes y distribuidores de
                     diversas categorías de productos de consumo
@@ -83,7 +83,7 @@
         </div>
     </div> <!-- final blur -->
 </div> <!-- final inicio -->
-<div class="seccion" id="inicio2">
+<div class="seccion" id="inicio2" style="overflow:visible;">
     <div class="conocenos-container">
         <div class="conocenos">
             <h1>Conócenos</h1>
@@ -147,7 +147,7 @@
                     </div>
                     <div class="parrafo">
                         <p>
-                            <span>Modelaos la teoría en la práctica, trabajando con tu equipo</span>
+                            <span>Modelamos la teoría en la práctica, trabajando con tu equipo</span>
                             para formar hábitos profesionales que aseguren la sostenibilidad
                             de la ejecución de la estrategia
                         </p>
@@ -158,7 +158,7 @@
     </div>
 </div><!-- final inicio2 -->
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%"
+<svg id="tope-porque" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%"
 	 height="200px" viewBox="0 20 950 100" xml:space="preserve">
 <style type="text/css">
 <![CDATA[
@@ -219,18 +219,18 @@
             a sus necesidades y oportunidades; soportando su estrategia
             comercial y logrando un crecimiento sustentable.
         </p>
-        <p>
+        <p class="mobile-hide">
             Los resultados obtenidos en las implementaciones
             realizadas, han propiciado relaciones comerciales de
             largo plazo con nuestros clientes.
         </p>
-        <p>
+        <p class="mobile-hide">
             Nos hemos distinguido por lograr cambios culturales
             en las organizaciones acompañados de plan
             comunicacional interno y una metodología para el
             manejo del cambio.
         </p>
-        <p>
+        <p class="no-padding">
             Formamos y certicamos facilitadores internos en
             metodología de gestión empoderando a los líderes
             participantes en el modelaje de sus colaboradores.
@@ -1419,27 +1419,19 @@
             new Vivus('mapa', {duration: 400});
         </script>
     </div>
+    <div class="relleno-float"></div>
     <div class="linea-naranja">
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        	 width="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89" xml:space="preserve">
-        <g>
-        	<path fill="#C67037" d="M97.478,258.793c3.944,0.389,7.816-1.226,11.192-3.103c4.682-2.603,8.848-6.137,12.689-9.841
-        		c8.577-8.271,16.06-18.163,21.368-28.843c2.001-4.026,3.757-8.338,4.339-12.825c0.376-2.9,0.111-6.231-2.174-8.322
-        		c-2.984-2.733-8.704-2.532-11.773-0.183c-4.208,3.22-3.099,9.753-1.106,13.864c2.958,6.104,9.85,9.586,15.912,11.842
-        		c7.818,2.91,16.254,4.026,24.522,4.731c8.169,0.697,16.37,0.805,24.554,1.225c11.168,0.572,22.323,1.341,33.496,1.834
-        		c48.026,2.118,96.475,1.389,144.047-6.136c10.63-1.681,21.216-3.768,31.59-6.64c7.911-2.19,15.855-4.796,22.908-9.08
-        		c6.002-3.646,11.883-9.292,12.522-16.669c0.612-7.07-6.167-11.215-12.538-9.042c-6.514,2.222-10.306,9.747-12.238,15.852
-        		c-1.98,6.257-2.965,13.302-0.969,19.675c3.445,11.004,15.488,14.997,25.807,16.353c8.918,1.172,18.045,0.716,26.953-0.322
-        		c0.278-0.033,0.281-0.474,0-0.44c-12.203,1.423-25.395,2.011-37.199-1.966c-5.39-1.817-10.43-4.961-13.42-9.917
-        		c-3.598-5.966-3.182-13.363-1.651-19.892c1.692-7.224,5.37-16.053,12.835-18.918c4.029-1.546,8.963-0.216,11.084,3.671
-        		c1.98,3.63,0.615,8.317-1.316,11.644c-4.313,7.432-12.882,11.658-20.584,14.652c-8.292,3.223-17.035,5.38-25.717,7.247
-        		c-23.576,5.068-47.736,7.491-71.77,9.101c-24.248,1.624-48.579,1.721-72.864,1.027c-21.09-0.603-42.13-2.114-63.208-2.975
-        		c-8.764-0.358-17.557-0.9-26.183-2.569c-7.974-1.543-16.104-4.192-22.363-9.555c-4.401-3.771-7.672-11.666-4.051-16.973
-        		c2.646-3.879,10.108-4.039,13.091-0.412c2.292,2.787,1.565,7.165,0.77,10.352c-1.26,5.051-3.659,9.818-6.243,14.306
-        		c-5.41,9.395-12.345,18.091-20.293,25.46c-3.516,3.261-7.33,6.277-11.548,8.581c-3.161,1.725-6.807,3.126-10.469,2.766
-        		C97.195,258.325,97.198,258.766,97.478,258.793L97.478,258.793z"/>
-        </g>
+        <svg version="1.1" id="linea" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 width="1920px" height="432px" viewBox="-560 -126 1920 432" enable-background="new -560 -126 1920 432" xml:space="preserve">
+        <path fill="none" stroke="#C67037" stroke-width="2.4649" stroke-miterlimit="10" d="M-559.999,290.524
+        	c0,0,102.148,3.29,230.497-208.825c0,0,37.671-74.33,24.471-101.015c0,0-13.189-28.152-50.374-22.898
+        	c0,0-39.386,8.831-34.587,46.891c0,0,7.418,54.004,64.443,78.693c0,0,123.146,60.35,682.672,59.156c0,0,473.807,0.387,729.26-88.523
+        	c0,0,107.529-39.661,130.752-100.232c0,0,12.169-30.695-11.264-53.849c0,0-18.504-20.689-58.762-3.846c0,0-71.107,30.064-60,167.236
+        	c0,0,6.371,123.826,272.891,91.678"/>
         </svg>
+        <script>
+            new Vivus('linea', {duration: 150});
+        </script>
     </div><!-- decorativo -->
     <div class="categorias">
         <?php
@@ -1546,7 +1538,7 @@
                 ?>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/yuly.jpg" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/yuly.png" />
                     </div>
                     <div class="texto">
                         <h2>YULY CÁRDENAS</h2><br />
@@ -1558,7 +1550,7 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_garcia.jpg" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_garcia.png" />
                     </div>
                     <div class="texto">
                         <h2>CARLOS GARCÍA</h2><br />
@@ -1570,7 +1562,7 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/yuly.jpg" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.png" />
                     </div>
                     <div class="texto">
                         <h2>TOMAS LORENZO</h2><br />
@@ -1582,7 +1574,7 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.jpg" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.png" />
                     </div>
                     <div class="texto">
                         <h2>CARLOS MONTIEL</h2><br />
@@ -1594,7 +1586,7 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/yuly.jpg" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.png" />
                     </div>
                     <div class="texto">
                         <h2>JORGE FLORES</h2><br />
@@ -1606,7 +1598,7 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/yuly.jpg" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.png" />
                     </div>
                     <div class="texto">
                         <h2>JAIME CÁRDENAS</h2><br />
@@ -1742,7 +1734,59 @@
                 </div>
             <?php endif; ?>
             <div class="contenido-producto">
+                <div class="descripcion-producto">
+                    <div class="nombre">
+                        <div class="icono">
+                            <img src="<?php echo $template_uri; ?>/imagenes/metodologia_negro.svg" />
+                        </div>
+                        <h2>Instrumentos en procesos de gestión comercial</h2>
+                    </div>
+                    <div class="fases">
+                        <div class="fase">
+                            <h3>Fase 1</h3>
+                            <h4>Diagnóstico</h4>
+                            <p>
+                                Generar compromiso y alineación para el cambio.
+                            </p>
+                        </div>
+                        <div class="fase">
+                            <h3>Fase 2</h3>
+                            <h4>Marco conceptual</h4>
+                            <p>
+                                Desarrollo de Guía de procesos.
+                            </p>
+                        </div>
+                        <div class="fase">
+                            <h3>Fase 3</h3>
+                            <h4>Implementación</h4>
+                            <p>
+                                Acompañamiento en Ejecución de los procesos metodológicos.
+                            </p>
+                        </div>
+                        <div class="fase">
+                            <h3>Fase 4</h3>
+                            <h4>Auditoría de procesos</h4>
+                            <p>
+                                Comprobación de los niveles de madurez alcanzados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="descripcion-producto">
 
+                </div>
+                <div class="descripcion-producto">
+
+                </div>
+                <div class="descripcion-producto">
+
+                </div>
+                <div class="descripcion-producto">
+
+                </div>
+                <div class="descripcion-producto">
+
+                </div>
             </div>
         </div><!-- final .contenedor-productos-y-servicios -->
     </div><!-- final .blur -->
@@ -1803,12 +1847,12 @@
                         <?php endif; ?>
                     </h2>
                     <div class="marcas">
-                        <img src="<?php echo $template_uri; ?>/imagenes/molinos_modernos.png" alt="molinos modernos" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/demasa.png" alt="demasa" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/monaca.png" alt="monaca" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/mavesa.png" alt="mavesa" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/alfonso_rivas.png" alt="alfonso rivas" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/frutika.png" alt="frutika" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/molinos_modernos.svg" alt="molinos modernos" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/demasa.svg" alt="demasa" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/monaca.svg" alt="monaca" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/mavesa.svg" alt="mavesa" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/alfonso_rivas.svg" alt="alfonso rivas" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/frutika.svg" alt="frutika" />
                         <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
@@ -1820,14 +1864,14 @@
                         <?php endif; ?>
                     </h2>
                     <div class="marcas">
-                        <img src="<?php echo $template_uri; ?>/imagenes/johnson.png" alt="johnson" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/diageo.png" alt="diageo" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/colgate_palmolive.png" alt="colgate palmolive" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/bp.png" alt="bp" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/johnson_and_johnson.png" alt="johnson" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/heinz.png" alt="heinz" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/concha_y_toro.png" alt="concha y toro" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/kellogs.png" alt="kellogs" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/johnson.svg" alt="johnson" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/diageo.svg" alt="diageo" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/colgate_palmolive.svg" alt="colgate palmolive" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/bp.svg" alt="bp" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/johnson_and_johnson.svg" alt="johnson" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/heinz.svg" alt="heinz" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/concha_y_toro.svg" alt="concha y toro" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/kellogs.svg" alt="kellogs" />
                         <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
@@ -1839,10 +1883,10 @@
                         <?php endif; ?>
                     </h2>
                     <div class="marcas">
-                        <img src="<?php echo $template_uri; ?>/imagenes/alcipal.png" alt="alcipal" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/euro_group.png" alt="euro group" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/cocensa.png" alt="cocensa" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/diroca.png" alt="diroca" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/altipal.svg" alt="altipal" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/euro_group.svg" alt="euro group" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/cocensa.svg" alt="cocensa" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/diroca.svg" alt="diroca" />
                         <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
