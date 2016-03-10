@@ -1455,7 +1455,9 @@
                         <img src="<?php echo $template_uri; ?>/imagenes/food.svg" alt="food" />
                     </div>
                     <div class="texto">
-                        <h2>FOOD</h2>
+                        <h2>FOOD
+                            <div class="flecha"></div>
+                        </h2>
                         <p>Pastas, harinas, galletas, cereales, etc.</p>
                     </div>
                 </div>
@@ -1464,7 +1466,9 @@
                         <img src="<?php echo $template_uri; ?>/imagenes/beverages.svg" alt="beverages" />
                     </div>
                     <div class="texto">
-                        <h2>BEVERAGES</h2>
+                        <h2>BEVERAGES
+                            <div class="flecha"></div>
+                        </h2>
                         <p>Jugos, whisky, ron, bebidas energizantes.</p>
                     </div>
                 </div>
@@ -1473,7 +1477,9 @@
                         <img src="<?php echo $template_uri; ?>/imagenes/home.svg" alt="home cleaning" />
                     </div>
                     <div class="texto">
-                        <h2>HOME CLEANING</h2>
+                        <h2>HOME CLEANING
+                            <div class="flecha"></div>
+                        </h2>
                         <p>Insecticidas, desinfectantes, toilet, kitchen, detergentes, suavizantes, air care, auto care, etc.</p>
                     </div>
                 </div>
@@ -1482,7 +1488,9 @@
                         <img src="<?php echo $template_uri; ?>/imagenes/personal.svg" alt="personal care" />
                     </div>
                     <div class="texto">
-                        <h2>PERSONAL CARE</h2>
+                        <h2>PERSONAL CARE
+                            <div class="flecha"></div>
+                        </h2>
                         <p>Shampoo, protección, sanitaria, baby care, etc.</p>
                     </div>
                 </div>
@@ -1491,7 +1499,9 @@
                         <img src="<?php echo $template_uri; ?>/imagenes/other.svg" alt="other categories" />
                     </div>
                     <div class="texto">
-                        <h2>OTHER CATEGORIES</h2>
+                        <h2>OTHER CATEGORIES
+                            <div class="flecha"></div>
+                        </h2>
                         <p>Lubricantes de automóviles, distribución de prensa escrita a retailers.</p>
                     </div>
                 </div>
@@ -1538,7 +1548,6 @@
                 ?>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/yuly.png" />
                     </div>
                     <div class="texto">
                         <h2>YULY CÁRDENAS</h2><br />
@@ -1550,7 +1559,6 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_garcia.png" />
                     </div>
                     <div class="texto">
                         <h2>CARLOS GARCÍA</h2><br />
@@ -1562,7 +1570,6 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.png" />
                     </div>
                     <div class="texto">
                         <h2>TOMAS LORENZO</h2><br />
@@ -1574,7 +1581,6 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.png" />
                     </div>
                     <div class="texto">
                         <h2>CARLOS MONTIEL</h2><br />
@@ -1586,7 +1592,6 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.png" />
                     </div>
                     <div class="texto">
                         <h2>JORGE FLORES</h2><br />
@@ -1598,7 +1603,6 @@
                 </div>
                 <div class="integrante">
                     <div class="foto">
-                        <img src="<?php echo $template_uri; ?>/imagenes/equipo/carlos_montiel.png" />
                     </div>
                     <div class="texto">
                         <h2>JAIME CÁRDENAS</h2><br />
@@ -1682,6 +1686,44 @@
                         procesos comerciales
                     </p>
                 </div>
+                <div class="descripcion-producto">
+                    <div class="nombre">
+                        <div class="icono">
+                            <img src="<?php echo $template_uri; ?>/imagenes/metodologia_negro.svg" />
+                        </div>
+                        <h2>Instrumentos en procesos de gestión comercial</h2>
+                    </div>
+                    <div class="fases">
+                        <div class="fase">
+                            <h3>Fase 1</h3>
+                            <h4>Diagnóstico</h4>
+                            <p>
+                                Generar compromiso y alineación para el cambio.
+                            </p>
+                        </div>
+                        <div class="fase">
+                            <h3>Fase 2</h3>
+                            <h4>Marco conceptual</h4>
+                            <p>
+                                Desarrollo de Guía de procesos.
+                            </p>
+                        </div>
+                        <div class="fase">
+                            <h3>Fase 3</h3>
+                            <h4>Implementación</h4>
+                            <p>
+                                Acompañamiento en Ejecución de los procesos metodológicos.
+                            </p>
+                        </div>
+                        <div class="fase">
+                            <h3>Fase 4</h3>
+                            <h4>Auditoría de procesos</h4>
+                            <p>
+                                Comprobación de los niveles de madurez alcanzados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div class="producto">
                     <div class="contenedor-imagen">
                         <div class="contenedor-imagen2">
@@ -1734,44 +1776,7 @@
                 </div>
             <?php endif; ?>
             <div class="contenido-producto">
-                <div class="descripcion-producto">
-                    <div class="nombre">
-                        <div class="icono">
-                            <img src="<?php echo $template_uri; ?>/imagenes/metodologia_negro.svg" />
-                        </div>
-                        <h2>Instrumentos en procesos de gestión comercial</h2>
-                    </div>
-                    <div class="fases">
-                        <div class="fase">
-                            <h3>Fase 1</h3>
-                            <h4>Diagnóstico</h4>
-                            <p>
-                                Generar compromiso y alineación para el cambio.
-                            </p>
-                        </div>
-                        <div class="fase">
-                            <h3>Fase 2</h3>
-                            <h4>Marco conceptual</h4>
-                            <p>
-                                Desarrollo de Guía de procesos.
-                            </p>
-                        </div>
-                        <div class="fase">
-                            <h3>Fase 3</h3>
-                            <h4>Implementación</h4>
-                            <p>
-                                Acompañamiento en Ejecución de los procesos metodológicos.
-                            </p>
-                        </div>
-                        <div class="fase">
-                            <h3>Fase 4</h3>
-                            <h4>Auditoría de procesos</h4>
-                            <p>
-                                Comprobación de los niveles de madurez alcanzados.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="descripcion-producto">
 
                 </div>
@@ -1942,58 +1947,82 @@
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <!-- nav script -->
 <script>
-    // ﻿$('a[href*=#]:not([href=#])').click(function () {
-    //     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    //         var target = $(this.hash) ;
-    //         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    //         if (target.length) {
-    //             $('html,body').animate({
-    //                 scrollTop: target.offset().top - 98
-    //             }, 800);
-    //             return false;
-    //         }
-    //     }
-    // });
+    $('#nav-collapse').find('a').click(function(){
+        $('#nav-collapse').collapse('hide');
+    });
+
+    $.fn.rotate = function(degrees) {
+        $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+                     '-moz-transform' : 'rotate('+ degrees +'deg)',
+                     '-ms-transform' : 'rotate('+ degrees +'deg)',
+                     'transform' : 'rotate('+ degrees +'deg)'});
+        return $(this);
+    };
+
+    $('.categoria').click(function() {
+        if ( $(window).width() < 768 )
+        {
+            $(this).find('p').slideToggle().toggleClass('opened');
+            if ( $(this).find('p').is('.opened') )
+                $(this).find('.flecha').rotate(90);
+            else
+                $(this).find('.flecha').rotate(0);
+        }
+    });
+
+    ﻿$('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash) ;
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 50
+                }, 800);
+                return false;
+            }
+        }
+    });
 
     function menu() {
         window.addEventListener('scroll', function (e) {
             var distanciaTope = window.pageYOffset;
-            // if ($(window).scrollTop() == $(document).height() - $(window).height() ) {
-            //     $('header nav ul li:nth-child(5)').addClass('hover');
-            //     $('header nav ul li:nth-child(1)').removeClass('hover');
-            //     $('header nav ul li:nth-child(2)').removeClass('hover');
-            //     $('header nav ul li:nth-child(3)').removeClass('hover');
-            //     $('header nav ul li:nth-child(4)').removeClass('hover');
-            //     $('#menu-mobile #track p').text('CONTACTO');
-            // } else if (distanciaTope < $('#servicios').offset().top - ($(window).height())/2) {
-            //     $('header nav ul li:nth-child(1)').addClass('hover');
-            //     $('header nav ul li:nth-child(2)').removeClass('hover');
-            //     $('header nav ul li:nth-child(3)').removeClass('hover');
-            //     $('header nav ul li:nth-child(4)').removeClass('hover');
-            //     $('header nav ul li:nth-child(5)').removeClass('hover');
-            //     $('#menu-mobile #track p').text('');
-            // } else if (distanciaTope < $('#portafolio').offset().top - ($(window).height())/2) {
-            //     $('header nav ul li:nth-child(2)').addClass('hover');
-            //     $('header nav ul li:nth-child(1)').removeClass('hover');
-            //     $('header nav ul li:nth-child(3)').removeClass('hover');
-            //     $('header nav ul li:nth-child(4)').removeClass('hover');
-            //     $('header nav ul li:nth-child(5)').removeClass('hover');
-            //     $('#menu-mobile #track p').text('SERVICIOS');
-            // } else if (distanciaTope < $('#equipo').offset().top - ($(window).height())/2) {
-            //     $('header nav ul li:nth-child(3)').addClass('hover');
-            //     $('header nav ul li:nth-child(1)').removeClass('hover');
-            //     $('header nav ul li:nth-child(2)').removeClass('hover');
-            //     $('header nav ul li:nth-child(4)').removeClass('hover');
-            //     $('header nav ul li:nth-child(5)').removeClass('hover');
-            //     $('#menu-mobile #track p').text('PORTAFOLIO');
-            // } else if (distanciaTope < $('footer').offset().top - ($(window).height())/2) {
-            //     $('header nav ul li:nth-child(4)').addClass('hover');
-            //     $('header nav ul li:nth-child(1)').removeClass('hover');
-            //     $('header nav ul li:nth-child(2)').removeClass('hover');
-            //     $('header nav ul li:nth-child(3)').removeClass('hover');
-            //     $('header nav ul li:nth-child(5)').removeClass('hover');
-            //     $('#menu-mobile #track p').text('EQUIPO');
-            // }
+            if ($(window).scrollTop() == $(document).height() - $(window).height() ) {
+                $('header ul.nav li:nth-child(5)').addClass('active');
+                $('header ul.nav li:nth-child(1)').removeClass('active');
+                $('header ul.nav li:nth-child(2)').removeClass('active');
+                $('header ul.nav li:nth-child(3)').removeClass('active');
+                $('header ul.nav li:nth-child(4)').removeClass('active');
+            } else if (distanciaTope < $('#grupo-jace').offset().top - ($(window).height())/2) {
+                $('header ul.nav li:nth-child(1)').addClass('active');
+                $('header ul.nav li:nth-child(2)').removeClass('active');
+                $('header ul.nav li:nth-child(3)').removeClass('active');
+                $('header ul.nav li:nth-child(4)').removeClass('active');
+                $('header ul.nav li:nth-child(5)').removeClass('active');
+            } else if (distanciaTope < $('#productos-y-servicios').offset().top - ($(window).height())/2) {
+                $('header ul.nav li:nth-child(2)').addClass('active');
+                $('header ul.nav li:nth-child(1)').removeClass('active');
+                $('header ul.nav li:nth-child(3)').removeClass('active');
+                $('header ul.nav li:nth-child(4)').removeClass('active');
+                $('header ul.nav li:nth-child(5)').removeClass('active');
+            } else if (distanciaTope < $('#clientes-y-aliados').offset().top - ($(window).height())/2) {
+                $('header ul.nav li:nth-child(3)').addClass('active');
+                $('header ul.nav li:nth-child(1)').removeClass('active');
+                $('header ul.nav li:nth-child(2)').removeClass('active');
+                $('header ul.nav li:nth-child(4)').removeClass('active');
+                $('header ul.nav li:nth-child(5)').removeClass('active');
+            } else if (distanciaTope < $('#contacto').offset().top - ($(window).height())/2) {
+                $('header ul.nav li:nth-child(4)').addClass('active');
+                $('header ul.nav li:nth-child(1)').removeClass('active');
+                $('header ul.nav li:nth-child(2)').removeClass('active');
+                $('header ul.nav li:nth-child(3)').removeClass('active');
+                $('header ul.nav li:nth-child(5)').removeClass('active');
+            } else if (distanciaTope < $('footer').offset().top - ($(window).height())/2) {
+                $('header ul.nav li:nth-child(5)').addClass('active');
+                $('header ul.nav li:nth-child(1)').removeClass('active');
+                $('header ul.nav li:nth-child(2)').removeClass('active');
+                $('header ul.nav li:nth-child(3)').removeClass('active');
+                $('header ul.nav li:nth-child(4)').removeClass('active');
+            }
 
             if (distanciaTope > 20)
             {

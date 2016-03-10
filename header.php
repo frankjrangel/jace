@@ -37,7 +37,7 @@
                     <li><a href="#clientes-y-aliados">Clientes & aliados</a></li>
                     <!-- <li><a href="#captacion-de-talento">Captación de talento</a></li> -->
                     <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <!-- <li><a href="#">Blog</a></li> -->
                   </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
