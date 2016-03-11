@@ -16,7 +16,7 @@
             <?php else : ?>
                 #inicio
                 {
-                    background: url('<?php echo $template_uri; ?>/imagenes/fondo_inicio.jpg');
+                    background: url('<?php echo $template_uri; ?>/imagenes/fondo_inicio.png');
                     background-size:cover;
                 }
             <?php endif; ?>
@@ -1416,7 +1416,7 @@
         </g>
         </svg>
         <script>
-            new Vivus('mapa', {duration: 400});
+            new Vivus('mapa', {duration: 700});
         </script>
     </div>
     <div class="relleno-float"></div>
@@ -1530,13 +1530,13 @@
             <?php else : ?>
                 #grupo-jace
                 {
-                    background: url('<?php echo $template_uri; ?>/imagenes/fondo_grupo_jace.jpg');
+                    background: url('<?php echo $template_uri; ?>/imagenes/fondo_grupo_jace.png');
                     background-size: cover;
                     background-position: center;
                 }
             <?php endif; ?>
         </style>
-        <h1>Conoce nuestro equipo de trabajo</h1>
+        <h1 class="titulo-seccion">Conoce nuestro equipo de trabajo</h1>
         <div class="contenedor-grupo">
 
             <div id="contenedor-equipo">
@@ -1651,7 +1651,7 @@
         <?php else : ?>
             #productos-y-servicios
             {
-                background: url('<?php echo get_template_directory_uri(); ?>/imagenes/fondo_productos.jpg');
+                background: url('<?php echo get_template_directory_uri(); ?>/imagenes/fondo_productos.png');
                 background-size: cover;
                 background-position: center;
             }
@@ -1679,6 +1679,7 @@
                 <div class="producto">
                     <div class="contenedor-imagen">
                         <img src="<?php echo $template_uri; ?>/imagenes/metodologia.svg" alt="metodologia de procesos" />
+                        <div class="flecha"></div>
                     </div>
                     <p>
                         Metodología de procesos de negocio con
@@ -1727,7 +1728,8 @@
                 </div>
                 <div class="producto">
                     <div class="contenedor-imagen">
-                            <img src="<?php echo $template_uri; ?>/imagenes/ejecucion.svg" alt="ejecucion de tienda" />
+                        <img src="<?php echo $template_uri; ?>/imagenes/ejecucion.svg" alt="ejecucion de tienda" />
+                        <div class="flecha"></div>
                     </div>
                     <p>
                         Ejecución de tienda perfecta MAPS
@@ -1765,6 +1767,7 @@
                 <div class="producto">
                     <div class="contenedor-imagen">
                         <img src="<?php echo $template_uri; ?>/imagenes/auditorias.svg" alt="auditorias de procesos" />
+                        <div class="flecha"></div>
                     </div>
                     <p>
                         Auditorias de Procesos (Distribuidores, Trade Marketing, Ventas , Gestión Comercial)
@@ -1805,6 +1808,7 @@
                 <div class="producto">
                     <div class="contenedor-imagen">
                         <img src="<?php echo $template_uri; ?>/imagenes/programas_capacitacion.svg" alt="programas de capacitacion" />
+                        <div class="flecha"></div>
                     </div>
                     <p>
                         Programas de capacitación
@@ -1833,6 +1837,7 @@
                 <div class="producto">
                     <div class="contenedor-imagen">
                         <img src="<?php echo $template_uri; ?>/imagenes/road_to_market.svg" alt="road to market" />
+                        <div class="flecha"></div>
                     </div>
                     <p>
                         Diseño del Road to Market
@@ -1873,6 +1878,7 @@
                 <div class="producto">
                     <div class="contenedor-imagen">
                         <img src="<?php echo $template_uri; ?>/imagenes/coaching.svg" alt="coaching comercial" />
+                        <div class="flecha"></div>
                     </div>
                     <p>
                         Coaching Comercial
@@ -2129,7 +2135,7 @@
         <?php else : ?>
             #clientes-y-aliados
             {
-                background: url('<?php echo get_template_directory_uri(); ?>/imagenes/fondo_clientes.jpg');
+                background: url('<?php echo get_template_directory_uri(); ?>/imagenes/fondo_clientes.png');
                 background-size: cover;
                 background-position: center;
             }
@@ -2240,7 +2246,7 @@
         <?php else : ?>
             #contacto
             {
-                background: url('<?php echo get_template_directory_uri(); ?>/imagenes/fondo_contacto.jpg');
+                background: url('<?php echo get_template_directory_uri(); ?>/imagenes/fondo_contacto.png');
                 background-size: cover;
                 background-position: center;
             }
@@ -2262,7 +2268,7 @@
 </div> <!-- final #contacto -->
 
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<!-- nav script -->
+
 <script>
     $('#nav-collapse').find('a').click(function(){
         $('#nav-collapse').collapse('hide');
@@ -2290,8 +2296,22 @@
     $('.producto').click(function() {
         if ( $(window).width() < 768 )
         {
+            $(this).find('p').slideToggle().toggleClass('opened');
+            if ( $(this).find('p').is('.opened') )
+                $(this).find('.flecha').fadeOut();
+            else
+                $(this).find('.flecha').fadeIn();
+        }
+    });
+
+    $('.producto').click(function() {
+        if ( $(window).width() < 768 )
+        {
             $(this).children('.contenedor-imagen').toggleClass('producto-activo');
             $(this).next('.descripcion-producto').slideToggle();
+            $('html, body').animate({
+                scrollTop: $(this).next('.descripcion-producto').offset().top - 100
+            }, 1000);
         }
         else
         {
@@ -2299,12 +2319,20 @@
             $(this).siblings().children('.contenedor-imagen').removeClass('producto-activo');
             var pos = $(this).index() / 2;
             $('.contenedor-productos-desktop .descripcion-producto').eq(pos).slideToggle().siblings().slideUp();
+
+            if ( $(this).children('.contenedor-imagen').hasClass('producto-activo') )
+            {
+                $('html, body').animate({
+                    scrollTop: $('.contenedor-productos-desktop').offset().top - 200
+                }, 1000);
+            }
         }
     });
 
     $(window).resize(function() {
         $('.descripcion-producto').hide();
         $('.producto').removeClass('producto-activo');
+        $('.contenedor-imagen').removeClass('producto-activo');
     });
 
     ﻿$('a[href*="#"]:not([href="#"])').click(function () {
@@ -2370,6 +2398,17 @@
                 $('.navbar').css('top', 20);
             }
 
+            // Fade in de mapa
+            var topDivHeight = $("#inicio2").height();
+            var viewPortSize = $(window).height();
+
+            var triggerAt = 1400;
+            var triggerHeight = (topDivHeight - viewPortSize) + triggerAt;
+
+            if ($(window).scrollTop() >= triggerHeight) {
+                $('.mapa-container').fadeIn();
+                $(this).off('scroll');
+            }
         });
     }
     window.onload = menu();
