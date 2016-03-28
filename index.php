@@ -42,7 +42,7 @@
                 else :
                     echo 'Desde 1998 brindamos asesoría a empresas trasnacionales y nacionales,
                             fabricantes y distribuidores de diversas categorías de productos
-                            de consumo masivo en varios latinoamérica';
+                            de consumo masivo en varios países de latinoamérica';
                 endif;
             ?>
         </div>
@@ -1538,6 +1538,13 @@
         </style>
         <h1 class="titulo-seccion">Conoce nuestro equipo de trabajo</h1>
         <div class="contenedor-grupo">
+            <!-- preload de imagenes hover -->
+            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/yuly_cardenas_color.png" />
+            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/carlos_garcia_color.png" />
+            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/tomas_lorenzo_color.png" />
+            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/carlos_montiel_color.png" />
+            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/jorge_flores_color.png" />
+            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/lhover.svg" />
 
             <div id="contenedor-equipo">
                 <?php
@@ -1554,8 +1561,6 @@
                         <h3>Psicólogo</h3><br />
                         <h2>ARGENTINA</h2>
                     </div>
-                    <div class="redes">
-                    </div>
                 </div>
                 <div class="integrante">
                     <div class="foto">
@@ -1565,52 +1570,52 @@
                         <h3>Abogado</h3><br />
                         <h2>ARGENTINA</h2>
                     </div>
-                    <div class="redes">
-                    </div>
+                    <a href="https://ar.linkedin.com/pub/rafael-carlos-garcia-fassolo/86/944/614" class="lred" target="_blank">
+                    </a>
                 </div>
                 <div class="integrante">
                     <div class="foto">
                     </div>
                     <div class="texto">
                         <h2>TOMAS LORENZO</h2><br />
-                        <h3>Lic. Administrador</h3><br />
+                        <h3>Administrador</h3><br />
                         <h2>VENEZUELA</h2>
                     </div>
-                    <div class="redes">
-                    </div>
+                    <a href="https://www.linkedin.com/pub/tomas-lorenzo/21/760/532/es" class="lred" target="_blank">
+                    </a>
                 </div>
                 <div class="integrante">
                     <div class="foto">
                     </div>
                     <div class="texto">
                         <h2>CARLOS MONTIEL</h2><br />
-                        <h3>Lic. Relaciones Industriales</h3><br />
+                        <h3>Industriólogo</h3><br />
                         <h2>VENEZUELA</h2>
                     </div>
-                    <div class="redes">
-                    </div>
+                    <a href="https://ve.linkedin.com/pub/carlos-rafael-montiel-matheus/49/529/62" class="lred" target="_blank">
+                    </a>
                 </div>
                 <div class="integrante">
                     <div class="foto">
                     </div>
                     <div class="texto">
                         <h2>JORGE FLORES</h2><br />
-                        <h3>Lic. Administración de Empresas</h3><br />
+                        <h3>Administrador</h3><br />
                         <h2>GUATEMALA</h2>
                     </div>
-                    <div class="redes">
-                    </div>
+                    <a href="https://gt.linkedin.com/pub/jorge-alejandro-flores-gonz%C3%A1lez/64/420/580" class="lred" target="_blank">
+                    </a>
                 </div>
                 <div class="integrante">
                     <div class="foto">
                     </div>
                     <div class="texto">
                         <h2>JAIME CÁRDENAS</h2><br />
-                        <h3>Ing. Indrustrial</h3><br />
+                        <h3>Ingeniero Indrustrial</h3><br />
                         <h2>ARGENTINA</h2>
                     </div>
-                    <div class="redes">
-                    </div>
+                    <a href="https://ar.linkedin.com/pub/jaime-alfonso-cardenas/33/942/57a" class="lred" target="_blank">
+                    </a>
                 </div>
                 <?php endif; ?>
             </div>
@@ -2253,7 +2258,7 @@
         <?php endif; ?>
     </style>
     <div class="blur">
-        <h1>Conózcanos</h1>
+        <h1>Conócenos</h1>
         <p>Queremos saber de tus ideas y proyectos, escríbenos y hagámoslo realidad</p>
         <div id="formulario-conozcanos">
             <?php
