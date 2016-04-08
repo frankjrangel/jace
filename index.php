@@ -26,31 +26,30 @@
 
         <div class="titulo-seccion">
             <?php
-                $hay_texto_en_bd = false; // Eliminar
-                if ( $hay_texto_en_bd ) :
-                    // Sacar texto
-                else :
-                    echo 'ASESORÍA, CONSULTORÍA, ENTRENAMIENTO <br /> <span>Y AUDITORÍA INTEGRAL EN PROCESOS COMERCIALES<span>';
-                endif;
+                $titulo_seccion_inicio = get_option('titulo_seccion_inicio', 'ASESORÍA, CONSULTORÍA, ENTRENAMIENTO Y AUDITORÍA INTEGRAL EN PROCESOS COMERCIALES');
+                echo wp_kses_post( $titulo_seccion_inicio );
+                // echo '<br />';
+                // echo '<span>';
+                // echo get_option('segunda_linea_titulo_seccion_inicio', 'Y AUDITORÍA INTEGRAL EN PROCESOS COMERCIALES');
+                // echo '</span>';
             ?>
         </div>
 
         <div class="subtitulo-seccion">
             <?php
-                if ( $hay_texto_en_bd ) :
-                    // Sacar texto
-                else :
-                    echo 'Desde 1998 brindamos asesoría a empresas trasnacionales y nacionales,
-                            fabricantes y distribuidores de diversas categorías de productos
-                            de consumo masivo en varios países de latinoamérica';
-                endif;
+                echo get_option('subtitulo_seccion_inicio',
+                    'Desde 1998 brindamos asesoría a empresas trasnacionales y nacionales,
+                    fabricantes y distribuidores de diversas categorías de productos
+                    de consumo masivo en varios países de latinoamérica');
             ?>
         </div>
 
         <div class="texto">
             <?php
-                if ( $hay_texto_en_bd ) :
-                    // Obtener texto
+                $texto = get_option('texto_seccion_inicio');;
+                if ( $texto ) :
+                    $texto = strip_tags($texto, '<p>');
+                    echo $texto;
                 else :
             ?>
                 <p class="mobile-hide">
@@ -77,7 +76,7 @@
                     un sólido conocimiento multimercado (México,
                     Guatemala, Dominicana, Puerto Rico, Panamá,
                     Colombia, Venezuela, Ecuador, Perú, Paraguay,
-                    Chile y Argentina)
+                    Chile y Argentina).
                 </p>
             <?php endif; ?>
         </div>
@@ -231,7 +230,7 @@
             manejo del cambio.
         </p>
         <p class="no-padding">
-            Formamos y certicamos facilitadores internos en
+            Formamos y certificamos facilitadores internos en
             metodología de gestión empoderando a los líderes
             participantes en el modelaje de sus colaboradores.
         </p>
