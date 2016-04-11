@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Jace</title>
-
+    <title>Grupo Jace Internacional</title>
+    <meta name="description" content="Somos una empresa dedicada a la asesoría, consultoría, entrenamiento y auditoría integral en procesos comerciales y de soporte a ventas, especializada en áreas como Ventas, distribución, trade marketing y recursos humanos.">
     <!-- Styles -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="<?php echo get_template_directory_uri(); ?>/bootstrap.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="<?php echo get_template_directory_uri(); ?>/bootstrap.css" rel="stylesheet"> -->
     <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet">
 </head>
 

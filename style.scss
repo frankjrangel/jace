@@ -547,6 +547,19 @@ header
                     background-size: 100% !important;
                 }
 
+                .foto-hover
+                {
+                    transition: all ease-in 0.3s;
+                    position:absolute;
+                    width: 100%;
+                    padding: 50%;
+                    top:10px;
+                    left:0;
+                    opacity:0;
+                    background-size: 100% !important;
+
+                }
+
                 .texto h2, .texto h3
                 {
                     transition: all 0.5s ease;
@@ -563,6 +576,11 @@ header
                     {
                         background: $negro;
                         color: $blanco;
+                    }
+
+                    .foto-hover
+                    {
+                        opacity: 1;
                     }
                 }
 
@@ -850,6 +868,11 @@ header
                         font-size: 18px;
                         color: $anaranjado;
                     }
+                }
+
+                .fase
+                {
+                    margin-bottom: 15px;
                 }
             }
 

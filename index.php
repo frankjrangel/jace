@@ -1561,7 +1561,7 @@
                     <div id="contenedor-equipo">
                     <?php $integrante = 1; ?>
                     <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
-                        <div class="integrante">
+                        <div class="integrante" style="position:relative">
                             <?php
                                 $img = '<img style="display:none;" src="'.get_field('imagen_hover').'" />';
                                 $img = wp_kses( $img, array( 'img' => array( 'style' => array(), 'src' => array() ) ) );
@@ -1574,15 +1574,19 @@
                                     {
                                         background: url("<?php the_post_thumbnail_url() ?>") no-repeat center !important;
                                     }
-                                    .integrante:nth-child(<?php echo $integrante ?>):hover .foto
+
+                                    .integrante:nth-child(<?php echo $integrante ?>) .foto-hover
                                     {
                                         background: url("<?php the_field('imagen_hover') ?>") no-repeat center !important;
                                     }
                                 </style>
                             </div>
+                            <div class="foto-hover">
+
+                            </div>
                             <div class="texto">
-                                <h2><?php the_title() ?></h2>
-                                <h3><?php the_field( 'profesion' ) ?></h3>
+                                <h2><?php the_title() ?></h2><br />
+                                <h3><?php the_field( 'profesion' ) ?></h3><br />
                                 <h2><?php the_field( 'pais' ) ?></h2>
                             </div>
                             <?php if( get_field( 'linkedin' ) ) :
