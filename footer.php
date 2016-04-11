@@ -61,24 +61,37 @@
         </svg>
     </div>
     <div class="oficinas">
-        <div class="oficina">
-            <h2>Oficina Guatemala</h2>
-            <p>18 Calle 24-69 Zona 10, Blvd. los Proceres Empresarial Zona Pradera, Torre IV, Nivel 12, Oficina 1204 (ASECORP), Ciudad de Guatemala, Guatemala</p>
-            <p>Teléfonos: <br /> +502 22617361 <br /> +502 22617362</p>
-            <p>Cel.: +502 41046141</p>
-
-        </div>
-        <div class="oficina">
-            <h2>Oficina Venezuela</h2>
-            <p>Estado Carabobo, Valencia Urb. Valles de Camoruco. CCP. Reda Building.</p>
-            <p>Teléfono: <br /> +58 241 316 4449</p>
-
-        </div>
-        <div class="oficina">
-            <h2>Oficina Argentina</h2>
-            <p>Pilar, código postal 1629, Provincia de Buenos Aires, Argentina.</p>
-            <p>Teléfono: <br /> +54 911 6725 7530</p>
-        </div>
+        <?php
+            $loop = new WP_Query( array(
+                'post_type' => 'oficinas-jace'
+            ) );
+            if ( $loop->have_posts() ) :
+                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <div class="oficina">
+                    <?php the_content(); ?>
+                </div>
+        <?php
+                endwhile;
+                wp_reset_postdata();
+            else:
+        ?>
+            <div class="oficina">
+                <h2>Oficina Guatemala</h2>
+                <p>18 Calle 24-69 Zona 10, Blvd. los Proceres Empresarial Zona Pradera, Torre IV, Nivel 12, Oficina 1204 (ASECORP), Ciudad de Guatemala, Guatemala</p>
+                <p>Teléfonos: <br /> +502 22617361 <br /> +502 22617362</p>
+                <p>Cel.: +502 41046141</p>
+            </div>
+            <div class="oficina">
+                <h2>Oficina Venezuela</h2>
+                <p>Estado Carabobo, Valencia Urb. Valles de Camoruco. CCP. Reda Building.</p>
+                <p>Teléfono: <br /> +58 241 316 4449</p>
+            </div>
+            <div class="oficina">
+                <h2>Oficina Argentina</h2>
+                <p>Pilar, código postal 1629, Provincia de Buenos Aires, Argentina.</p>
+                <p>Teléfono: <br /> +54 911 6725 7530</p>
+            </div>
+        <?php endif; ?>
     </div>
 </footer>
 <div class="volver-arriba">

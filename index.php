@@ -26,8 +26,8 @@
 
         <div class="titulo-seccion">
             <?php
-                $titulo_seccion_inicio = get_option('titulo_seccion_inicio', 'ASESORÍA, CONSULTORÍA, ENTRENAMIENTO Y AUDITORÍA INTEGRAL EN PROCESOS COMERCIALES');
-                echo wp_kses_post( $titulo_seccion_inicio );
+                $titulo_seccion_inicio = get_option( 'titulo_seccion_inicio', 'ASESORÍA, CONSULTORÍA, ENTRENAMIENTO Y AUDITORÍA INTEGRAL EN PROCESOS COMERCIALES' );
+                echo esc_html( wp_kses_post( $titulo_seccion_inicio ) );
                 // echo '<br />';
                 // echo '<span>';
                 // echo get_option('segunda_linea_titulo_seccion_inicio', 'Y AUDITORÍA INTEGRAL EN PROCESOS COMERCIALES');
@@ -37,16 +37,18 @@
 
         <div class="subtitulo-seccion">
             <?php
-                echo get_option('subtitulo_seccion_inicio',
+                $subtitulo_seccion_inicio = get_option( 'subtitulo_seccion_inicio',
                     'Desde 1998 brindamos asesoría a empresas trasnacionales y nacionales,
                     fabricantes y distribuidores de diversas categorías de productos
-                    de consumo masivo en varios países de latinoamérica');
+                    de consumo masivo en varios países de latinoamérica' );
+                echo esc_html( wp_kses_post( $subtitulo_seccion_inicio ) );
             ?>
         </div>
 
         <div class="texto">
             <?php
-                $texto = get_option('texto_seccion_inicio');;
+                $texto = get_option('texto_seccion_inicio');
+                $texto = wp_kses_post( $texto );
                 if ( $texto ) :
                     $texto = strip_tags($texto, '<p>');
                     echo $texto;
@@ -89,25 +91,26 @@
         </div>
         <div class="circulo-conocenos"></div><!-- decorativo -->
         <div class="texto-conocenos">
-            <?php $titulo_conocenos = false;
-                if ( $titulo_conocenos ) :
-                    // Obtener titulo
-                else :
-            ?>
-                <h1>Nuestros principios de actuación</h1>
-            <?php endif; ?>
+            <?php $titulo_conocenos = get_option('titulo_conocenos_seccion_inicio', 'Nuestros principios de actuación'); ?>
+                <h1><?php echo wp_kses( strip_tags( $titulo_conocenos ) , array() ) ?></h1>
 
             <!-- Párrafos de principios de actuación -->
             <div id="contenedor-parrafos">
                 <?php
-                    $hay_parrafos_principios = false;
-                    if ( $hay_parrafos_principios ) :
-                        // Obtener parrafos y loopear
+                    $loop = new WP_Query( array(
+                        'post_type' => 'principios-inicio'
+                    ) );
+                    if ( $loop->have_posts() ) :
+                        while( $loop->have_posts() ) : $loop->the_post() ?>
+                            <div class="parrafo">
+                                <p><?php the_content() ?></p>
+                            </div>
+                <?php   endwhile;
                     else :
                 ?>
                     <div class="parrafo">
                         <p>
-                            <span>Compromiso en todas las etapas del proyecto,</span>
+                            <strong>Compromiso en todas las etapas del proyecto,</strong>
                             ya que nuestra imagen se alimenta y crece del éxito
                             de nuestros clientes, es por ello que participamos y
                             nos involucramos en todos los pilares que conforman
@@ -117,14 +120,14 @@
                     </div>
                     <div class="parrafo">
                         <p>
-                            <span>Duro con el problema suave con la persona, </span>
+                            <strong>Duro con el problema suave con la persona, </strong>
                             invitamos a todos los involucrados del proceso a buscar
                             soluciones y mejoras a aquellos procesos que pueden gestionarse mejor.
                         </p>
                     </div>
                         <div class="parrafo">
                         <p>
-                            <span>Hacer el acompañamiento con excelencia desde el inicio, </span>
+                            <strong>Hacer el acompañamiento con excelencia desde el inicio, </strong>
                             evidenciando la credibilidad técnica de nuestro equipo de consultores,
                             evitándose el desgaste innecesario de las personas y reduciendo la pérdida
                             de dinero.
@@ -132,26 +135,26 @@
                     </div>
                     <div class="parrafo">
                         <p>
-                            <span>El volumen de ventas es una consecuencia de la ejecución, </span>
+                            <strong>El volumen de ventas es una consecuencia de la ejecución, </strong>
                             por lo que monitoreamos ésta a través de indicadores de gestión, accionando
                             en consecuencia de ellos, mejorando el desempeño cualitativo y cuantitativo.
                         </p>
                     </div>
                     <div class="parrafo">
                         <p>
-                            <span>Nos basamos en hechos y cifras, sustentando todos</span>
+                            <strong>Nos basamos en hechos y cifras, sustentando todos</strong>
                             nuestros planteamientos en conocimiento y experticia técnica que
                             nos permite soportar de manera contundente las propuestas y recomendaciones.
                         </p>
                     </div>
                     <div class="parrafo">
                         <p>
-                            <span>Modelamos la teoría en la práctica, trabajando con tu equipo</span>
+                            <strong>Modelamos la teoría en la práctica, trabajando con tu equipo</strong>
                             para formar hábitos profesionales que aseguren la sostenibilidad
                             de la ejecución de la estrategia
                         </p>
                     </div>
-                <?php endif; ?>
+                <?php endif; wp_reset_postdata(); ?>
             </div>
         </div>
     </div>
@@ -200,20 +203,16 @@
 
 <div class="seccion" id="por-que">
     <div class="texto-container medio">
+    <?php $titulo_porque = get_option( 'titulo_por_que_seccion_inicio', '¿Por qué somos tu opción?' ); ?>
+        <h1><?php echo esc_html( wp_kses( $titulo_porque , array() ) ) ?></h1>
     <?php
-        $titulo_porque = false;
-        if ( $titulo_porque ) :
-            // Sacar titulo
-        else :
-    ?>
-        <h1>¿Por qué somos tu opción?</h1>
-    <?php endif;
-        $texto_porque = false;
+        $texto_porque = get_option( 'texto_por_que_seccion_inicio' );
         if ( $texto_porque ) :
-            // Sacar texto
+            echo wp_kses_post( strip_tags( $texto_porque , '<p>' ) );
         else :
     ?>
-        <p>Desarrollamos e implementamos soluciones integrales
+        <p>
+            Desarrollamos e implementamos soluciones integrales
             involucrando al talento interno del cliente, ajustadas
             a sus necesidades y oportunidades; soportando su estrategia
             comercial y logrando un crecimiento sustentable.
@@ -1443,12 +1442,28 @@
         <?php endif; ?>
         <div class="contenedor-categorias">
             <?php
-                $hay_categorias = false;
-                if ( $hay_categorias ) :
-                    //Correr loop y obtener categorias
+                $loop = new WP_Query( array(
+                    'post_type' => 'categorias-inicio'
+                ) );
+                if ( $loop->have_posts() ) :
+                    while( $loop->have_posts() ) : $loop->the_post() ?>
+                        <div class="categoria">
+                            <div class="imagen">
+                                <?php the_post_thumbnail() ?>
+                            </div>
+                            <div class="texto">
+                                <h2><?php the_title() ?>
+                                    <div class="flecha"></div>
+                                </h2>
+                                <p>
+                                    <?php the_content() ?>
+                                </p>
+                            </div>
+                        </div>
+            <?php
+                    endwhile;
+                else :
             ?>
-
-            <?php else : ?>
                 <div class="categoria">
                     <div class="imagen">
                         <img src="<?php echo $template_uri; ?>/imagenes/food.svg" alt="food" />
@@ -1504,7 +1519,7 @@
                         <p>Lubricantes de automóviles, distribución de prensa escrita a retailers.</p>
                     </div>
                 </div>
-            <?php endif; ?>
+            <?php endif; wp_reset_postdata() ?>
         </div>
     </div>
 </div>
@@ -1538,20 +1553,63 @@
         <h1 class="titulo-seccion">Conoce nuestro equipo de trabajo</h1>
         <div class="contenedor-grupo">
             <!-- preload de imagenes hover -->
-            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/yuly_cardenas_color.png" />
-            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/carlos_garcia_color.png" />
-            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/tomas_lorenzo_color.png" />
-            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/carlos_montiel_color.png" />
-            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/jorge_flores_color.png" />
-            <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/lhover.svg" />
+            <?php
+                $loop = new WP_Query( array(
+                    'post_type' => 'grupo-jace'
+                ) );
+                if ( $loop->have_posts() ) : ?>
+                    <div id="contenedor-equipo">
+                    <?php $integrante = 1; ?>
+                    <?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <div class="integrante">
+                            <?php
+                                $img = '<img style="display:none;" src="'.get_field('imagen_hover').'" />';
+                                $img = wp_kses( $img, array( 'img' => array( 'style' => array(), 'src' => array() ) ) );
+                                $img = strip_tags( $img, '<img>' );
+                                echo $img;
+                            ?>
+                            <div class="foto">
+                                <style>
+                                    .integrante:nth-child(<?php echo $integrante ?>) .foto
+                                    {
+                                        background: url("<?php the_post_thumbnail_url() ?>") no-repeat center !important;
+                                    }
+                                    .integrante:nth-child(<?php echo $integrante ?>):hover .foto
+                                    {
+                                        background: url("<?php the_field('imagen_hover') ?>") no-repeat center !important;
+                                    }
+                                </style>
+                            </div>
+                            <div class="texto">
+                                <h2><?php the_title() ?></h2>
+                                <h3><?php the_field( 'profesion' ) ?></h3>
+                                <h2><?php the_field( 'pais' ) ?></h2>
+                            </div>
+                            <?php if( get_field( 'linkedin' ) ) :
+                                $red = '<a href="'.get_field( 'linkedin' ).'" class="lred" target="_blank"></a>';
+                                $red = wp_kses( $red, array(
+                                                        'a' => array(
+                                                            'href' => array(),
+                                                            'class' => array(),
+                                                            'target' => array()
+                                                        )
+                                                    )
+                                                );
+                                echo $red;
+                            endif; ?>
+                        </div>
+                        <?php $integrante = $integrante + 1; ?>
+                    <?php endwhile; wp_reset_postdata(); ?>
+                    </div>
+            <?php else : ?>
+                <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/yuly_cardenas_color.png" />
+                <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/carlos_garcia_color.png" />
+                <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/tomas_lorenzo_color.png" />
+                <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/carlos_montiel_color.png" />
+                <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/equipo/jorge_flores_color.png" />
+                <img style="display:none;" src="<?php echo $template_uri ?>/imagenes/lhover.svg" />
 
             <div id="contenedor-equipo">
-                <?php
-                    $hay_equipo = false;
-                    if ( $hay_equipo ) :
-                        // Correr loop y sacar equipo
-                    else :
-                ?>
                 <div class="integrante">
                     <div class="foto">
                     </div>
@@ -1616,9 +1674,8 @@
                     <a href="https://ar.linkedin.com/pub/jaime-alfonso-cardenas/33/942/57a" class="lred" target="_blank">
                     </a>
                 </div>
-                <?php endif; ?>
             </div>
-
+        <?php endif; ?>
         </div><!-- final .contenedor-grupo -->
         <div id="fill-grupo"></div><!-- decorativo -->
         <div id="relleno-grupo"></div><!-- decorativo -->
@@ -1675,9 +1732,32 @@
         </div>
         <div class="contenedor-productos-y-servicios">
             <?php
-                $productos_y_servicios = false;
-                if ( $productos_y_servicios ) :
-                    // Loop de productos_y_servicios
+                $loop = new WP_Query( array(
+                    'post_type' => 'metodologias-jace'
+                ) );
+                if ( $loop->have_posts() ) :
+                    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <div class="producto">
+                            <div class="contenedor-imagen">
+                                <?php the_post_thumbnail(); ?>
+                                <div class="flecha"></div>
+                            </div>
+                            <p>
+                                <?php the_title(); ?>
+                            </p>
+                        </div>
+                        <div class="descripcion-producto">
+                            <div class="nombre">
+                                <h2><?php the_field( 'titulo_de_descripcion' ); ?></h2>
+                                <div class="cerrar-producto"></div>
+                            </div>
+                            <div class="fases">
+                                <?php the_content(); ?>
+                            </div>
+                        </div>
+            <?php
+                    endwhile;
+                    wp_reset_postdata();
                 else :
             ?>
                 <div class="producto">
@@ -1923,9 +2003,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="fill-productos"></div>
             <?php endif; ?>
+            <div class="fill-productos"></div>
             <div class="contenedor-productos-desktop">
+            <?php
+                $loop = new WP_Query( array (
+                    'post_type' => 'metodologias-jace'
+                ) );
+                if ( $loop->have_posts() ) :
+                    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <div class="descripcion-producto">
+                            <div class="nombre">
+                                <div class="icono">
+                                    <?php the_post_thumbnail(); ?>
+                                </div>
+                                <h2><?php the_field( 'titulo_de_descripcion' ); ?></h2>
+                                <div class="cerrar-producto"></div>
+                            </div>
+                            <div class="fases">
+                                <?php the_content(); ?>
+                            </div>
+                            <div class="relleno-producto"></div>
+                        </div>
+            <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else:
+            ?>
                 <div class="descripcion-producto">
                     <div class="nombre">
                         <div class="icono">
@@ -2119,6 +2223,7 @@
                     </div>
                     <div class="relleno-producto"></div>
                 </div>
+            <?php endif; ?>
             </div>
         </div><!-- final .contenedor-productos-y-servicios -->
     </div><!-- final .blur -->
@@ -2179,12 +2284,25 @@
                         <?php endif; ?>
                     </h2>
                     <div class="marcas">
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/molinos_modernos.svg" alt="molinos modernos" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/demasa.svg" alt="demasa" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/monaca.svg" alt="monaca" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/mavesa.svg" alt="mavesa" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/alfonso_rivas.svg" alt="alfonso rivas" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/frutika.svg" alt="frutika" />
+                        <?php
+                            $loop = new WP_Query( array(
+                                'post_type' => 'aliados-jace',
+                                'category_name' => 'Regionales - Nacionales'
+                            ) );
+                            if ( $loop->have_posts() ) :
+                                while ( $loop->have_posts() ) : $loop->the_post();
+                                    the_post_thumbnail();
+                                endwhile;
+                                wp_reset_postdata();
+                            else:
+                        ?>
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/molinos_modernos.svg" alt="molinos modernos" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/demasa.svg" alt="demasa" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/monaca.svg" alt="monaca" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/mavesa.svg" alt="mavesa" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/alfonso_rivas.svg" alt="alfonso rivas" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/frutika.svg" alt="frutika" />
+                        <?php endif; ?>
                         <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
@@ -2196,14 +2314,27 @@
                         <?php endif; ?>
                     </h2>
                     <div class="marcas">
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/johnson.svg" alt="johnson" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/diageo.svg" alt="diageo" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/colgate_palmolive.svg" alt="colgate palmolive" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/bp.svg" alt="bp" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/johnson_and_johnson.svg" alt="johnson" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/heinz.svg" alt="heinz" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/concha_y_toro.svg" alt="concha y toro" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/kellogs.svg" alt="kellogs" />
+                        <?php
+                            $loop = new WP_Query( array(
+                                'post_type' => 'aliados-jace',
+                                'category_name' => 'Transnacionales'
+                            ) );
+                            if ( $loop->have_posts() ) :
+                                while ( $loop->have_posts() ) : $loop->the_post();
+                                    the_post_thumbnail();
+                                endwhile;
+                                wp_reset_postdata();
+                            else:
+                        ?>
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/johnson.svg" alt="johnson" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/diageo.svg" alt="diageo" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/colgate_palmolive.svg" alt="colgate palmolive" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/bp.svg" alt="bp" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/johnson_and_johnson.svg" alt="johnson" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/heinz.svg" alt="heinz" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/concha_y_toro.svg" alt="concha y toro" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/kellogs.svg" alt="kellogs" />
+                        <?php endif; ?>
                         <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
@@ -2215,10 +2346,23 @@
                         <?php endif; ?>
                     </h2>
                     <div class="marcas">
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/altipal.svg" alt="altipal" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/euro_group.svg" alt="euro group" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/cocensa.svg" alt="cocensa" />
-                        <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/diroca.svg" alt="diroca" />
+                        <?php
+                            $loop = new WP_Query( array(
+                                'post_type' => 'aliados-jace',
+                                'category_name' => 'Distribuidoras'
+                            ) );
+                            if ( $loop->have_posts() ) :
+                                while ( $loop->have_posts() ) : $loop->the_post();
+                                    the_post_thumbnail();
+                                endwhile;
+                                wp_reset_postdata();
+                            else:
+                        ?>
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/altipal.svg" alt="altipal" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/euro_group.svg" alt="euro group" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/cocensa.svg" alt="cocensa" />
+                            <img src="<?php echo $template_uri; ?>/imagenes/clientes_y_aliados/diroca.svg" alt="diroca" />
+                        <?php endif; ?>
                         <div style="width:100%;clear: both;"></div>
                     </div>
                 </div>
